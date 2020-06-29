@@ -1,0 +1,2 @@
+export const CHANGE_ADDRESS = "CHANGE_ADDRESS";
+export const FOUND_BAD_WORD = "FOUND_BAD_WORD";
