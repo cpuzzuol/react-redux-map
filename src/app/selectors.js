@@ -1,1 +1,0 @@
-export const searchAddress = store => store.searchAddress;
