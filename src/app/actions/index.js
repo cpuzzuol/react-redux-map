@@ -1,4 +1,5 @@
-import { CHANGE_ADDRESS, FOUND_BAD_WORD } from "../constants/action-types";
+// ACTIONS CAN ONLY BE OBJECTS, NOT PROMISES
+import { CHANGE_ADDRESS, FOUND_BAD_WORD, DATA_LOADED, DATA_REQUESTED } from "../constants/action-types";
 
 export const changeAddress = payload => ({
     type: CHANGE_ADDRESS,
@@ -8,3 +9,7 @@ export const changeAddress = payload => ({
 export const foundBadWord = payload => ({
     type: FOUND_BAD_WORD
 });
+
+export function getData() {
+    return { type: DATA_REQUESTED }
+}

@@ -1,4 +1,4 @@
-import {CHANGE_ADDRESS, FOUND_BAD_WORD} from "../constants/action-types";
+import {CHANGE_ADDRESS, FOUND_BAD_WORD, DATA_LOADED} from "../constants/action-types";
 
 const initialState = {
     address: ""
