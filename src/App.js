@@ -1,14 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
-import Address from "./components/Address";
 import './App.css';
-import Map from "./components/Map";
+import Map from "./features/mapdata/Map";
 
 function App() {
   return (
     <div className="App">
-      <Address />
       <Map />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

@@ -1,21 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from '../features/counter/counterSlice';
-import address from "./reducers/address";
-import { forbiddenWordsMiddleware } from "./middleware";
-import thunk from "redux-thunk";
-import mapData from "./reducers/mapdata";
+import mapdataReducer from '../features/mapdata/mapdataSlice';
 import createSagaMiddleware from "redux-saga";
 import apiSaga from "./sagas/api-saga"
 
-const initializeSagaMiddleware = createSagaMiddleware();
+//const initializeSagaMiddleware = createSagaMiddleware();
 
 export default configureStore({
   reducer: {
     counter: counterReducer,
-    searchAddress: address,
-    mapData: mapData,
+    mapData: mapdataReducer,
   },
-  middleware: [forbiddenWordsMiddleware, thunk, initializeSagaMiddleware],
+  //middleware: [initializeSagaMiddleware],
 });
 
-initializeSagaMiddleware.run(apiSaga)
+//initializeSagaMiddleware.run(apiSaga)
